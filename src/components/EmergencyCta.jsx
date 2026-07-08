@@ -2,7 +2,7 @@ import { Phone, ArrowUpRight } from 'lucide-react'
 import { PHONE_DISPLAY, PHONE_TEL } from '../data.js'
 import { Reveal } from './ui.jsx'
 
-export default function EmergencyCta() {
+export default function EmergencyCta({ onRequestQuote }) {
   return (
     <section className="relative overflow-hidden bg-navy py-20 sm:py-28" aria-label="Emergency call to action">
       <div
@@ -55,12 +55,13 @@ export default function EmergencyCta() {
             <Phone className="h-6 w-6" aria-hidden="true" />
             Call Now · {PHONE_DISPLAY}
           </a>
-          <a
-            href="#contact"
+          <button
+            type="button"
+            onClick={onRequestQuote}
             className="magnetic-btn glass-dark inline-flex items-center gap-2 rounded-full px-7 py-4 font-semibold text-white"
           >
             Request Free Quote <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </a>
+          </button>
         </div>
       </Reveal>
     </section>

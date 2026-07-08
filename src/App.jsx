@@ -16,6 +16,7 @@ import Faq from './components/Faq.jsx'
 import EmergencyCta from './components/EmergencyCta.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import QuoteModal from './components/QuoteModal.jsx'
 import { PHONE_TEL, WHATSAPP_URL } from './data.js'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -79,17 +80,21 @@ function MobileCallBar() {
 }
 
 export default function App() {
+  const [quoteOpen, setQuoteOpen] = useState(false)
+
   useEffect(() => {
     const id = setTimeout(() => ScrollTrigger.refresh(), 300)
     return () => clearTimeout(id)
   }, [])
+
+  const openQuote = () => setQuoteOpen(true)
 
   return (
     <div className="relative">
       <MouseLight />
       <Navbar />
       <main id="main">
-        <Hero />
+        <Hero onRequestQuote={openQuote} />
         <TrustBar />
         <Services />
         <WhyUs />
@@ -99,11 +104,12 @@ export default function App() {
         <Process />
         <Areas />
         <Faq />
-        <EmergencyCta />
+        <EmergencyCta onRequestQuote={openQuote} />
         <Contact />
       </main>
       <Footer />
       <MobileCallBar />
+      <QuoteModal open={quoteOpen} onClose={() => setQuoteOpen(false)} />
     </div>
   )
 }

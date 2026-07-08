@@ -15,7 +15,7 @@ const DROPS = [
   { left: '72%', delay: '5s', dur: '8s', size: 8 },
 ]
 
-export default function Hero() {
+export default function Hero({ onRequestQuote }) {
   const ref = useRef(null)
 
   useEffect(() => {
@@ -98,13 +98,14 @@ export default function Hero() {
         </p>
 
         <div className="hero-cta mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
-          <a
-            href="#contact"
+          <button
+            type="button"
+            onClick={onRequestQuote}
             className="magnetic-btn ring-pulse inline-flex min-h-[3.5rem] items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-bold text-white shadow-glow sm:justify-start"
           >
             Request Free Quote
             <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
-          </a>
+          </button>
         </div>
 
         <ul className="hero-badges mt-12 flex flex-wrap gap-x-7 gap-y-3">
