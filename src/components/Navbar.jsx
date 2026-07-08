@@ -35,17 +35,17 @@ export default function Navbar() {
       />
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          scrolled ? 'glass shadow-soft py-2' : 'bg-transparent py-4'
+          scrolled ? 'glass shadow-soft py-1.5 sm:py-2' : 'bg-transparent py-2.5 sm:py-4'
         }`}
       >
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12"
           aria-label="Main navigation"
         >
-          <a href="#home" className="flex items-center gap-3" aria-label="Rescue Plumbers Plus — home">
-            <img src="/rpp-logo.svg" alt="" className="h-14 w-14" />
+          <a href="#home" className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label="Rescue Plumbers Plus — home">
+            <img src="/rpp-logo.svg" alt="" className="h-10 w-10 shrink-0 sm:h-14 sm:w-14" />
             <span
-              className={`font-display text-xl sm:text-2xl font-extrabold tracking-tight leading-tight transition-colors ${
+              className={`font-display text-base sm:text-2xl font-extrabold tracking-tight leading-tight whitespace-nowrap transition-colors ${
                 scrolled ? 'text-navy' : 'text-white'
               }`}
             >
@@ -102,16 +102,16 @@ export default function Navbar() {
 
       {/* Mobile overlay menu */}
       <div
-        className={`fixed inset-0 z-[70] bg-navy/95 backdrop-blur-xl transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 z-[70] flex flex-col overflow-y-auto bg-navy/95 backdrop-blur-xl transition-opacity duration-300 lg:hidden ${
           open ? 'opacity-100' : 'pointer-events-none opacity-0'
         }`}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile menu"
       >
-        <div className="flex items-center justify-between px-5 py-4">
-          <div className="flex items-center gap-3">
-            <img src="/rpp-logo.svg" alt="" className="h-10 w-10" />
+        <div className="flex shrink-0 items-center justify-between px-5 py-3">
+          <div className="flex items-center gap-2">
+            <img src="/rpp-logo.svg" alt="" className="h-9 w-9" />
             <span className="font-display font-extrabold text-white">Rescue Plumbers Plus</span>
           </div>
           <button
@@ -122,7 +122,7 @@ export default function Navbar() {
             <X className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <ul className="mt-8 flex flex-col gap-2 px-8">
+        <ul className="mt-2 flex flex-col gap-1 px-6">
           {NAV_LINKS.map((l, i) => (
             <li
               key={l.href}
@@ -134,17 +134,17 @@ export default function Navbar() {
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-2xl px-4 py-4 font-display text-2xl font-bold text-white hover:bg-white/5 hover:text-accent-light"
+                className="block rounded-xl px-4 py-2.5 font-display text-lg font-bold text-white hover:bg-white/5 hover:text-accent-light"
               >
                 {l.label}
               </a>
             </li>
           ))}
         </ul>
-        <div className="space-y-3 px-8 pt-8">
+        <div className="mt-auto shrink-0 space-y-2.5 px-6 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-5">
           <a
             href={`tel:${PHONE_TEL}`}
-            className="magnetic-btn flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 text-lg font-bold text-white"
+            className="magnetic-btn flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-base font-bold text-white"
           >
             <Phone className="h-5 w-5" aria-hidden="true" /> Call {PHONE_DISPLAY}
           </a>
@@ -152,7 +152,7 @@ export default function Navbar() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="magnetic-btn flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-4 text-lg font-bold text-white"
+            className="magnetic-btn flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-base font-bold text-white"
           >
             <MessageCircle className="h-5 w-5" aria-hidden="true" /> WhatsApp Emergency
           </a>
