@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" role="img" aria-label="Rescue Plumbers Plus logo">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="3.5" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto-start-reverse">
+      <path d="M0,0.5 L9.5,5 L0,9.5 Z" fill="#3B82C4"/>
+    </marker>
+  </defs>
+  <g transform="rotate(-26 280 260)">
+    <path d="M 160 102.4 A 240 182 0 1 0 463.8 377" fill="none" stroke="#C0344A" stroke-width="30" stroke-linecap="round"/>
+    <path d="M 98.7 248.8 A 182 128 0 0 1 437.6 196" fill="none" stroke="#3B82C4" stroke-width="25" stroke-linecap="round" marker-end="url(#ah)"/>
+    <path d="M 459.3 282.2 A 182 128 0 0 1 115.1 314.1" fill="none" stroke="#3B82C4" stroke-width="25" stroke-linecap="round" marker-end="url(#ah)"/>
+  </g>
+  <text x="150" y="205" font-family="'Plus Jakarta Sans', 'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif" font-weight="800" fill="#C0344A" font-size="63">RESCUE</text>
+  <text x="150" y="272" font-family="'Plus Jakarta Sans', 'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif" font-weight="800" fill="#C0344A" font-size="63">PLUMBERS</text>
+  <text x="150" y="339" font-family="'Plus Jakarta Sans', 'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif" font-weight="800" fill="#C0344A" font-size="63">PLUS</text>
+  <text x="368" y="428" font-family="'Plus Jakarta Sans', 'Nunito', 'Arial Rounded MT Bold', Arial, sans-serif" font-weight="800" fill="#C0344A" font-size="52">24/7</text>
+</svg>
